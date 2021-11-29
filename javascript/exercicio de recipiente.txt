@@ -1,0 +1,14 @@
+// Um laboratório possui 3 recipientes
+//recipiente A que contém o liquÍdo A
+//recipiente B que contém o liquÍdo B
+//recipiente C que contém o liquido C
+//porém um cientista precisa colocar o liquído B no recipiente A 
+//o liquído A no recipiente C e o liquído C no recipiente B
+
+let recipienteA = 'Liquído A';
+let recipienteB = 'Liquído B';
+let recipienteC = 'Liquído C';
+
+console.log('recipiente A contém '+ recipienteA );
+console.log('recipiente B contém '+ recipienteB);
+console.log('recipiente C contém ' + recipienteC);

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>O número é : <span id="aaa">0</span></h1>
+    <p>A raiz quadrada é : <span id="raiz">0</span></p>
+    <p>O número é  inteiro: <span id="inteiro">Sim</span></p>
+    <p>Isto é um número : <span id="isan"></span>Sim</span></p>
+    <p>Arredondado para cima: <span id="arcima">0</span></p>
+    <p>Arredondado para baixo: <span id="arbaixo">0</span></p>
+    <p>Com duas casas decimais: <span id="decimal2">0</span></p>
+</body>
+<script>
+    
+     
+     var number = prompt("Por favor digite um número");
+    var spannumero = document.getElementById("aaa");
+    console.log(spannumero);
+    var spanraiz = document.getElementById("raiz");
+    var spaninteiro = document.getElementById("inteiro");
+    var spaisan = document.getElementById("isan");
+    var spanarcima = document.getElementById("arcima");
+    var spanarbaixo = document.getElementById("arbaixo");
+    var spandecimal2 = document.getElementById("decimal2");
+  
+    spanarbaixo.innerText = "";
+     spannumero.innerText = "";
+     spanraiz.innerText = "";
+     spaninteiro.innerText = "";
+     spaisan.innerText = "";
+     spanarcima.innerText = "";
+     spandecimal2.innerText = "";
+     spannumero.innerText = number;
+    number = Number(number);
+    spanraiz.innerText = Math.sqrt(number).toString();
+    if(Number.isInteger(number)) {
+        spaninteiro.innerText = "Sim";
+    }
+    else {
+        spaninteiro.innerText = "Não";
+    }
+    if(isNaN(number)) {
+        spaninteiro.innerText = "Não";
+    }
+    else {
+        spaninteiro.innerText = "Sim";
+    }
+    spanarcima.innerText = Math.ceil(number).toString();
+    spanarbaixo.innerText = Math.floor(number).toString();
+    spandecimal2.innerText = number.toFixed(2).toString();
+    
+
+
+</script>;
+</html>
